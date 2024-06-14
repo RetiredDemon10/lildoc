@@ -1,0 +1,63 @@
+
+/* Location.css */
+
+.location-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .location-card {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .location-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .location-card-content {
+    position: relative;
+  }
+  
+  .location-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .location-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+  
+
+    /* #27295b */
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: 0 0 8px 8px;
+    transition: background-color 0.3s;
+  }
+  
+  .location-card:hover .location-title {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  @media (max-width: 768px) {
+    .location-title {
+      font-size: 1em;
+    }
+  }
+  

@@ -1,0 +1,51 @@
+/* Hero.css */
+
+.hero {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+}
+
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #27295b;
+  background-color: #ffffff;
+  text-decoration: wavy;
+
+}
+
+
+/* .slide-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+} */
+
+.slide-title {
+  font-family: 'Audiowide', Audiowide; /* Use any Google Font or any other preferred font */
+  font-size: 50px; /* Adjust font size as needed */
+  font-weight: 800; /* Adjust font weight as needed */
+  color: #333; /* Adjust color as needed */
+  text-align: center; /* Center align the text */
+  margin-top: 50px; /* Adjust margin top as needed */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+  
+  /* Add any additional styles as needed */
+}
+.slide-subtitle {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Lucida Grande;
+  font-style: italic;
+  
+}
+ 

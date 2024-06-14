@@ -1,0 +1,240 @@
+  <div class="main-wrapper">
+            
+    <section class="account-section bg_img" style="background-image: url('https://prosperity-trust.com/assets/images/frontend/login_bg/6110c9ec14e281628490220.jpg');">
+        <div class="account-section-left">
+            <div class="account-section-left-inner">
+                <h4 class="title text-white mb-2">Welcome Back!</h4>
+                <p class="text-white">Provide your username and password and login into your account</p>
+                <a href="https://prosperitytrustbank.netlify.app" class="btn btn-sm btn-outline--base mt-3"> <i class="la la-reply" aria-hidden="true"></i> Back to Home</a>
+            </div>
+        </div>
+        <div class="account-section-right">
+            <div class="top text-center mb-5">
+                <a href="https://prosperitytrustbank.netlify.app" class="account-logo">
+                    <img src="https://prosperity-trust.com/assets/images/logoIcon/logo.png" alt="Logo">
+                </a>
+            </div>
+            <div class="middle">
+                <form method="POST" action="https://prosperity-trust.com/user/login" class="verify-gcaptcha account-form">
+                    <input type="hidden" name="_token" value="FwF9WEMJCMAYWJ4CRlanjheawQnopLe1PX7O19Ts">                    <div class="form-group">
+                        <label for="email" class="form-label required">Username or Email</label>
+                        <input type="text" name="username" value="" class="form--control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="form-label required">Password</label>
+                        <input id="password" type="password" class="form--control" name="password" required>
+                    </div>
+
+                    
+                    <div class="form-group form-check d-flex justify-content-between">
+                        <div>
+                            <input class="form-check-input" type="checkbox" name="remember" id="remember" >
+                            <label class="form-check-label" for="remember">Remember Me</label>
+                        </div>
+
+                        <a class="forgot-pass" href="https://prosperity-trust.com/user/password/reset">
+                            Forgot password?                        </a>
+                    </div>
+
+                    <button type="submit" id="recaptcha" class="btn btn--base w-100">Login</button>
+                </form>
+
+                <p class="text-white mt-3">Don't have an account?                    <a href="https://prosperity-trust.com/user/register" class="text--base">Create New</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    </div>
+
+
+
+
+
+
+
+
+    <section>
+  {/* Container */}
+  <div className="px-5 py-16 md:px-10 md:py-24 lg:py-32">
+    {/* Component */}
+    <div className="mx-auto flex w-full max-w-[798px] flex-col rounded-[36px] bg-black py-8 text-white">
+      {/* Facts Div */}
+      <div className="grid h-full w-full grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-4 md:gap-0">
+        {/* Fact Item */}
+        <div className="flex flex-col items-center justify-center lg:border-r lg:border-solid lg:border-r-[#c3c0c04d]">
+          <h4 className="mb-4 text-2xl font-bold md:text-3xl">200+</h4>
+          <p className="text-sm">Blocks</p>
+        </div>
+        {/* Fact Item */}
+        <div className="flex flex-col items-center justify-center lg:border-r lg:border-solid lg:border-r-[#c3c0c04d]">
+          <h4 className="mb-4 text-2xl font-bold md:text-3xl">45</h4>
+          <p className="text-sm">Templates</p>
+        </div>
+        {/* Fact Item */}
+        <div className="flex flex-col items-center justify-center lg:border-r lg:border-solid lg:border-r-[#c3c0c04d]">
+          <h4 className="mb-4 text-2xl font-bold md:text-3xl">1500+</h4>
+          <p className="text-sm">Customers</p>
+        </div>
+        {/* Fact Item */}
+        <div className="flex flex-col items-center justify-center lg:border-r lg:border-solid lg:border-r-[#c3c0c04d]">
+          <h4 className="mb-4 text-2xl font-bold md:text-3xl">890</h4>
+          <p className="text-sm">Support Tickets</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+register
+
+// Register.jsx
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import './styles.css';
+
+const Register = () => {
+  const [formData, setFormData] = useState({
+    email: '',
+    username: '',
+    name: '',
+    password: ''
+  });
+  const history = useHistory();
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Here you would typically send formData to your server to register the user
+    // For simplicity, let's just log the data and simulate registration
+    console.log(formData);
+    // Simulated registration, you would replace this with actual registration logic
+    // For simplicity, assuming registration is successful and redirecting to login page
+    history.push('/login');
+  };
+
+  return (
+    <div className="register-container">
+      <h2>Register</h2>
+      <form onSubmit={handleSubmit}>
+        <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
+        <input type="text" name="username" placeholder="Username" value={formData.username} onChange={handleChange} required />
+        <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} required />
+        <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} required />
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  );
+};
+
+export default Register;
+
+
+
+
+
+
+styles.css 
+
+/* styles.css */
+.register-container,
+.login-container {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  text-align: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+login
+
+
+// Login.jsx
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import './styles.css';
+
+const Login = () => {
+  const [formData, setFormData] = useState({
+    username: '',
+    password: ''
+  });
+  const history = useHistory();
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Here you would typically send formData to your server to authenticate the user
+    // For simplicity, let's just log the data and simulate authentication
+    console.log(formData);
+    // Simulated authentication, you would replace this with actual authentication logic
+    // For simplicity, assuming authentication is successful and redirecting to dashboard
+    history.push('/dashboard');
+  };
+
+  return (
+    <div className="login-container">
+      <h2>Login</h2>
+      <form onSubmit={handleSubmit}>
+        <input type="text" name="username" placeholder="Username" value={formData.username} onChange={handleChange} required />
+        <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} required />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  );
+};
+
+export default Login;
+

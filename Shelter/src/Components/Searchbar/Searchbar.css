@@ -1,0 +1,210 @@
+/* SearchNewLayout.css */
+/* 
+.search {
+    background-color: #27295b;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .dropdown, .date-picker {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    color: #1111cb;
+    width: calc(25% - 10px);
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .dropdown:focus, .date-picker:focus {
+    border-color: #27295b;
+  }
+  
+  .date-picker {
+    cursor: pointer;
+  }
+  
+  .search-button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #27295b;
+    
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    width: calc(25% - 10px);
+  }
+  
+  .search-button:hover {
+    background-color: #f04b4c;
+    color: #fff;
+  }
+  
+  @media (max-width: 768px) {
+    .dropdown, .date-picker, .search-button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
+   */
+
+
+
+
+
+   /* another one  */
+
+/* 
+   .filterContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f5f5f5;
+    border-radius: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .filterContainer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
+  .filterLabel {
+    font-weight: bold;
+    margin-right: 1rem;
+  }
+  
+  .filterInput {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    margin-right: 1rem;
+  }
+  
+  .budgetInput {
+    position: relative;
+  }
+  
+  .budgetPlaceholder {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  
+  .budgetDropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    z-index: 1;
+  }
+  
+  .budgetOption {
+    cursor: pointer;
+    padding: 0.25rem;
+  }
+  
+  .budgetOption:hover {
+    background-color: #f5f5f5;
+  } */
+
+
+
+  .search {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: #27295b;
+    border-radius: 0.5rem;
+    color: #f5f5f5;
+  }
+
+  
+  .label {
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+  
+  .dropdown {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    margin-right: 1rem;
+  }
+  
+  .date-picker {
+    margin-right: 1rem;
+  }
+  
+  .budget-input {
+    position: relative;
+    margin-right: 1rem;
+  }
+  
+  .budget-placeholder {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  
+  .budget-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #27295b;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    z-index: 1;
+  }
+  
+  .budget-option {
+    cursor: pointer;
+    padding: 0.25rem;
+  }
+  
+  .budget-option:hover {
+    background-color: #ff2f00;
+  }
+  
+
+  .search-button {
+    padding: 0.5rem 1rem;
+    background-color: #ff2f00;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .search {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .label,
+    .dropdown,
+    .date-picker,
+    .budget-input,
+    .search-button {
+      margin-bottom: 0.5rem;
+      margin-right: 0;
+    }
+  }
